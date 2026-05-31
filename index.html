@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="app.css?v=7" />
+  <link rel="stylesheet" href="app.css?v=8" />
   <style>
-    .delivery-form .map-btn{width:100%;min-height:42px}.map-link{display:inline-flex;align-items:center;justify-content:center;min-height:38px;color:var(--gold-light);font-weight:900;text-decoration:none;border:1px solid rgba(241,210,138,.18);border-radius:8px;background:rgba(5,3,2,.22)}body.light-mode .map-link{background:rgba(255,255,255,.55)}
+    .delivery-form .map-btn{width:100%;min-height:42px}.map-link{display:inline-flex;align-items:center;justify-content:center;min-height:38px;color:var(--gold-light);font-weight:900;text-decoration:none;border:1px solid rgba(241,210,138,.18);border-radius:8px;background:rgba(5,3,2,.22)}body.light-mode .map-link{background:rgba(255,255,255,.55)}.cart-note{margin:6px 0 12px;color:var(--muted);line-height:1.5;font-size:.92rem}.checkout-action{width:100%;margin-top:14px}
   </style>
 </head>
 <body>
@@ -19,7 +19,7 @@
     <div class="welcome-content">
       <img src="namana-preethi-logo.png" alt="Namana & Preethi's Lounge logo" />
       <p class="eyebrow">Grand Luxury Welcome</p>
-      <h1>Welcome to Namana & Preethi's Lounge</h1>
+      <h1><span>Welcome to</span><span>Namana &</span><span>Preethi's</span><span>Lounge</span></h1>
       <p class="welcome-story">For the last 5 years, our lounge has served authentic South Indian taste with a premium dining spirit across Karnataka. From Davangere to Bengaluru, Mysore, Shivamogga, and Tumkur, every plate carries a warm story, a richer memory, and a little extra chutney happiness.</p>
       <div class="city-strip">
         <span>Bengaluru</span><span>Davangere</span><span>Mysore</span><span>Shivamogga</span><span>Tumkur</span>
@@ -132,16 +132,19 @@
         <div class="locked-content" data-content="customer">
         <div class="section-head">
           <div><p class="eyebrow">Customer Portal</p><h2>Order Online</h2></div>
-          <button class="gold-btn" id="checkoutBtn"><i data-lucide="send"></i>Place Order</button>
         </div>
         <div class="shop-layout">
           <div class="menu-grid" id="customerMenu"></div>
           <aside class="cart-panel">
-            <h3>Your Order</h3>
+            <h3>Cart & Checkout</h3>
+            <p class="cart-note">Add food items, enter delivery details, then place your order.</p>
             <form class="delivery-form" id="deliveryForm">
               <label>Customer Name<input name="customerName" required placeholder="Your name" /></label>
               <label>Mobile Number<input name="mobile" required placeholder="9876543210" /></label>
-              <label>Delivery Location<textarea name="location" required placeholder="Hostel / department / full address or Google Maps link"></textarea></label>
+              <label class="full-span">Full Address<textarea name="address" required placeholder="House / hostel / department / street address"></textarea></label>
+              <label>Nearby Place<input name="nearby" required placeholder="Near library, hostel, canteen..." /></label>
+              <label>Area<input name="area" required placeholder="Auto-detected area or type manually" /></label>
+              <label class="full-span">Google Location<textarea name="location" required placeholder="Google Maps link will auto-fill after permission"></textarea></label>
               <button class="ghost-btn map-btn" id="useGoogleLocation" type="button"><i data-lucide="map-pin"></i>Use Google Location</button>
               <a class="map-link" id="openGoogleMaps" href="https://www.google.com/maps/search/?api=1&query=Data%20Science%20Department%2C%20BIET%20College%2C%20Davangere" target="_blank" rel="noreferrer">Open Google Maps</a>
             </form>
@@ -149,6 +152,7 @@
             <div class="total-row"><span>Items Total</span><strong id="cartSubtotal">₹0</strong></div>
             <div class="total-row"><span>GST 5%</span><strong id="cartGst">₹0</strong></div>
             <div class="total-row grand"><span>Payable</span><strong id="cartTotal">₹0</strong></div>
+            <button class="gold-btn checkout-action" id="checkoutBtn" type="button" aria-label="Place order after reviewing cart"><i data-lucide="send"></i>Place Order</button>
             <div class="order-message" id="orderMessage" aria-live="polite"></div>
             <div class="receipt-card hidden" id="customerReceipt">
               <span>Confirmed Receipt</span>
@@ -205,7 +209,14 @@
           <article class="admin-card"><span>Revenue</span><strong id="adminRevenue">₹0</strong><p>Including GST</p></article>
         </div>
         <div class="record-panel wide">
-          <h3>Recent Orders</h3>
+          <div class="live-head">
+            <div>
+              <p class="eyebrow">Real Time Information</p>
+              <h3>Recent Orders</h3>
+            </div>
+            <button class="ghost-btn" id="enableNotify" type="button"><i data-lucide="bell-ring"></i>Enable Alerts</button>
+          </div>
+          <div class="live-alert" id="liveAlert">Waiting for the next customer order...</div>
           <div id="orderList"></div>
         </div>
         </div>
@@ -252,6 +263,6 @@
   </div>
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script src="app.js?v=7"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>
