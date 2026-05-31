@@ -8,7 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="app.css?v=4" />
+  <link rel="stylesheet" href="app.css?v=7" />
+  <style>
+    .delivery-form .map-btn{width:100%;min-height:42px}.map-link{display:inline-flex;align-items:center;justify-content:center;min-height:38px;color:var(--gold-light);font-weight:900;text-decoration:none;border:1px solid rgba(241,210,138,.18);border-radius:8px;background:rgba(5,3,2,.22)}body.light-mode .map-link{background:rgba(255,255,255,.55)}
+  </style>
 </head>
 <body>
   <section class="welcome-screen" id="welcomeScreen" aria-label="Welcome story">
@@ -124,7 +127,9 @@
             <form class="delivery-form" id="deliveryForm">
               <label>Customer Name<input name="customerName" required placeholder="Your name" /></label>
               <label>Mobile Number<input name="mobile" required placeholder="9876543210" /></label>
-              <label>Delivery Location<textarea name="location" required placeholder="Hostel / department / full address"></textarea></label>
+              <label>Delivery Location<textarea name="location" required placeholder="Hostel / department / full address or Google Maps link"></textarea></label>
+              <button class="ghost-btn map-btn" id="useGoogleLocation" type="button"><i data-lucide="map-pin"></i>Use Google Location</button>
+              <a class="map-link" id="openGoogleMaps" href="https://www.google.com/maps/search/?api=1&query=Data%20Science%20Department%2C%20BIET%20College%2C%20Davangere" target="_blank" rel="noreferrer">Open Google Maps</a>
             </form>
             <div id="cartItems" class="cart-items"></div>
             <div class="total-row"><span>Items Total</span><strong id="cartSubtotal">₹0</strong></div>
@@ -233,6 +238,6 @@
   </div>
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script src="app.js?v=4"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>

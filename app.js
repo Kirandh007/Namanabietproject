@@ -56,6 +56,8 @@ state.auth.admin ||= false;
 state.lastReceipt ||= null;
 state.lastBillReceipt ||= null;
 
+let autoLocationRequested = false;
+
 function save() {
   localStorage.setItem("npl-app-state", JSON.stringify(state));
   renderAll();
@@ -82,6 +84,7 @@ function setView(view) {
   document.querySelector("#viewTitle").textContent = titles[view];
   document.body.classList.remove("menu-open");
   renderAuth();
+  if (view === "customer") requestGoogleLocation(true);
 }
 
 document.addEventListener("click", (event) => {
@@ -142,6 +145,43 @@ document.querySelector("#customerMenu").addEventListener("click", (event) => {
   if (existing) existing.qty += 1;
   else state.cart.push({ name: item.name, price: item.price, qty: 1 });
   save();
+});
+
+function requestGoogleLocation(isAuto = false) {
+  const locationField = document.querySelector('#deliveryForm [name="location"]');
+  const mapLink = document.querySelector("#openGoogleMaps");
+  const message = document.querySelector("#orderMessage");
+  if (isAuto) {
+    if (autoLocationRequested || locationField.value.trim()) return;
+    autoLocationRequested = true;
+  }
+  if (!navigator.geolocation) {
+    message.textContent = "Google location is not supported in this browser. Please paste your Google Maps link or type your address.";
+    return;
+  }
+  message.textContent = isAuto
+    ? "Please allow location permission so we can auto-detect your delivery location."
+    : "Getting your Google location. Please allow location permission.";
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+      const mapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
+      locationField.value = mapsUrl;
+      mapLink.href = mapsUrl;
+      mapLink.textContent = "Open Your Google Location";
+      message.textContent = "Google location added successfully. You can now confirm your order.";
+    },
+    () => {
+      message.textContent = "Location permission was blocked. Open Google Maps, copy your location link, and paste it in the delivery location box.";
+      mapLink.href = "https://www.google.com/maps";
+      mapLink.textContent = "Open Google Maps";
+    },
+    { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+  );
+}
+
+document.querySelector("#useGoogleLocation").addEventListener("click", () => {
+  requestGoogleLocation(false);
 });
 
 function renderCart() {
