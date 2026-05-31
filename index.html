@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namana & Preethi's Lounge | Luxury Restaurant App</title>
+  <meta name="description" content="Luxury restaurant web application for Namana & Preethi's Lounge, BIET College, Davangere." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="app.css?v=4" />
+</head>
+<body>
+  <section class="welcome-screen" id="welcomeScreen" aria-label="Welcome story">
+    <div class="welcome-bg"></div>
+    <div class="welcome-content">
+      <img src="namana-preethi-logo.png" alt="Namana & Preethi's Lounge logo" />
+      <p class="eyebrow">Grand Luxury Welcome</p>
+      <h1>Welcome to Namana & Preethi's Lounge</h1>
+      <p class="welcome-story">For the last 5 years, our lounge has served authentic South Indian taste with a premium dining spirit across Karnataka. From Davangere to Bengaluru, Mysore, Shivamogga, and Tumkur, every plate carries a warm story, a richer memory, and a little extra chutney happiness.</p>
+      <div class="city-strip">
+        <span>Bengaluru</span><span>Davangere</span><span>Mysore</span><span>Shivamogga</span><span>Tumkur</span>
+      </div>
+      <div class="grand-opening">
+        <span>Grand Opening</span>
+        <strong>19.06.2026</strong>
+        <p>Our 2nd branch opens in Bengaluru with a royal celebration of food, family, and unforgettable memories.</p>
+      </div>
+      <blockquote id="welcomeQuote">Good memories are best served hot.</blockquote>
+      <button class="gold-btn" id="enterApp" type="button"><i data-lucide="sparkles"></i>Enter Lounge</button>
+      <div class="welcome-timer"><span id="welcomeTimer">10</span> seconds to the luxury experience</div>
+    </div>
+  </section>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" data-view="home">
+        <img src="namana-preethi-logo.png" alt="Namana & Preethi's Lounge logo" />
+        <span>Namana & Preethi's Lounge</span>
+      </a>
+
+      <nav class="side-nav" aria-label="Application navigation">
+        <button class="active" data-view="home"><i data-lucide="sparkles"></i>Overview</button>
+        <button data-view="customer"><i data-lucide="shopping-bag"></i>Customer App</button>
+        <button data-view="reservation"><i data-lucide="calendar-check"></i>Reservations</button>
+        <button data-view="admin"><i data-lucide="shield-check"></i>Admin Suite</button>
+        <button data-view="billing"><i data-lucide="receipt-text"></i>N&P Billing</button>
+      </nav>
+
+      <div class="sidebar-card">
+        <span>Live Status</span>
+        <strong>Open Now</strong>
+        <p>Data Science Department, BIET College, Davangere</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" type="button" aria-label="Open menu"><i data-lucide="menu"></i></button>
+        <div>
+          <p class="eyebrow">Where Great Food Meets Great Memories</p>
+          <h1 id="viewTitle">Namana & Preethi's Lounge</h1>
+        </div>
+        <div class="top-actions">
+          <button class="ghost-btn theme-toggle" id="themeToggle" type="button"><i data-lucide="sun"></i><span>White Mode</span></button>
+          <button class="ghost-btn" data-view="customer"><i data-lucide="utensils-crossed"></i>Click Here to Order Food</button>
+          <button class="ghost-btn" data-view="reservation"><i data-lucide="calendar-check"></i>Click Here to Reserve Table</button>
+          <button class="gold-btn" data-view="admin"><i data-lucide="lock-keyhole"></i>Admin Login</button>
+        </div>
+      </header>
+
+      <section class="view active" id="home">
+        <div class="hero-app">
+          <div class="hero-copy">
+            <img class="hero-logo" src="namana-preethi-logo.png" alt="Namana & Preethi's Lounge logo" />
+            <p class="eyebrow">Premium Dining App</p>
+            <h2 id="heroFunnyHeadline">Our dosa is so crisp, even your attendance shortage will forget its sadness.</h2>
+            <p>Namana & Preethi's Lounge serves luxury comfort food with online ordering, table reservation, billing, and enough chutney confidence to make every celebration taste official.</p>
+            <div class="quote-showcase">
+              <span>Chef says</span>
+              <strong id="funnyQuote">Diet starts tomorrow. Today we feast.</strong>
+            </div>
+            <div class="hero-actions">
+              <button class="gold-btn" data-view="customer"><i data-lucide="shopping-cart"></i>Click Here to Order Food</button>
+              <button class="ghost-btn" data-view="reservation"><i data-lucide="calendar-plus"></i>Click Here to Reserve Table</button>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="metric"><span>Today's Orders</span><strong id="metricOrders">0</strong></div>
+            <div class="metric"><span>Reservations</span><strong id="metricReservations">0</strong></div>
+            <div class="metric"><span>Revenue</span><strong id="metricRevenue">₹0</strong></div>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article><i data-lucide="smartphone"></i><h3>Customer Portal</h3><p>Browse menu, add items, checkout, and reserve tables.</p></article>
+          <article><i data-lucide="badge-indian-rupee"></i><h3>N&P Billing</h3><p>Admin billing with item rows, GST, grand total, and digital signature.</p></article>
+          <article><i data-lucide="bar-chart-3"></i><h3>Admin Analytics</h3><p>Live summaries for orders, reservations, and revenue.</p></article>
+        </div>
+      </section>
+
+      <section class="view" id="customer">
+        <div class="login-lock" data-lock="customer">
+          <img src="namana-preethi-logo.png" alt="" />
+          <p class="eyebrow">Customer Login</p>
+          <h2>Welcome to the Guest Lounge</h2>
+          <p>Login to order food online and build your dining cart.</p>
+          <form class="login-form" data-login-form="customer">
+            <label>Login ID<input name="loginId" value="customer@npl.com" /></label>
+            <label>Password<input name="password" type="password" value="customer123" /></label>
+            <button class="gold-btn" type="submit"><i data-lucide="log-in"></i>Unlock Customer Portal</button>
+          </form>
+          <p class="login-message" data-login-message="customer"></p>
+        </div>
+        <div class="locked-content" data-content="customer">
+        <div class="section-head">
+          <div><p class="eyebrow">Customer Portal</p><h2>Order Online</h2></div>
+          <button class="gold-btn" id="checkoutBtn"><i data-lucide="send"></i>Place Order</button>
+        </div>
+        <div class="shop-layout">
+          <div class="menu-grid" id="customerMenu"></div>
+          <aside class="cart-panel">
+            <h3>Your Order</h3>
+            <form class="delivery-form" id="deliveryForm">
+              <label>Customer Name<input name="customerName" required placeholder="Your name" /></label>
+              <label>Mobile Number<input name="mobile" required placeholder="9876543210" /></label>
+              <label>Delivery Location<textarea name="location" required placeholder="Hostel / department / full address"></textarea></label>
+            </form>
+            <div id="cartItems" class="cart-items"></div>
+            <div class="total-row"><span>Items Total</span><strong id="cartSubtotal">₹0</strong></div>
+            <div class="total-row"><span>GST 5%</span><strong id="cartGst">₹0</strong></div>
+            <div class="total-row grand"><span>Payable</span><strong id="cartTotal">₹0</strong></div>
+            <div class="order-message" id="orderMessage" aria-live="polite"></div>
+            <div class="receipt-card hidden" id="customerReceipt">
+              <span>Confirmed Receipt</span>
+              <strong id="receiptId">ORD-00000</strong>
+              <p id="receiptDetails">Thank you for ordering.</p>
+            </div>
+          </aside>
+        </div>
+        </div>
+      </section>
+
+      <section class="view" id="reservation">
+        <div class="section-head">
+          <div><p class="eyebrow">Reservation</p><h2>Click Here to Reserve Table</h2></div>
+        </div>
+        <div class="two-column">
+          <form class="glass-form" id="reservationForm">
+            <label>Name<input name="name" required placeholder="Guest name" /></label>
+            <label>Mobile<input name="mobile" required placeholder="9876543210" /></label>
+            <label>Date<input name="date" type="date" required /></label>
+            <label>Time<input name="time" type="time" required /></label>
+            <label>Guests<select name="guests"><option>2</option><option>4</option><option>6</option><option>8</option></select></label>
+            <label>Occasion<select name="occasion"><option>Dining</option><option>Birthday</option><option>Faculty Meet</option><option>Celebration</option></select></label>
+            <button class="gold-btn" type="submit"><i data-lucide="calendar-plus"></i>Save Reservation</button>
+          </form>
+          <div class="record-panel">
+            <h3>Reservation Records</h3>
+            <div id="reservationList"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="admin">
+        <div class="login-lock" data-lock="admin">
+          <img src="namana-preethi-logo.png" alt="" />
+          <p class="eyebrow">Admin Login</p>
+          <h2>Secure Lounge Control Room</h2>
+          <p>Login to view orders, reservations, revenue and restaurant controls.</p>
+          <form class="login-form" data-login-form="admin">
+            <label>Login ID<input name="loginId" value="admin@npl.com" /></label>
+            <label>Password<input name="password" type="password" value="admin123" /></label>
+            <button class="gold-btn" type="submit"><i data-lucide="shield-check"></i>Unlock Admin Suite</button>
+          </form>
+          <p class="login-message" data-login-message="admin"></p>
+        </div>
+        <div class="locked-content" data-content="admin">
+        <div class="section-head">
+          <div><p class="eyebrow">Admin Suite</p><h2>Restaurant Control Room</h2></div>
+          <button class="ghost-btn" id="resetDemo"><i data-lucide="refresh-cw"></i>Reset Demo</button>
+        </div>
+        <div class="admin-grid">
+          <article class="admin-card"><span>Orders</span><strong id="adminOrders">0</strong><p>Customer online orders</p></article>
+          <article class="admin-card"><span>Bookings</span><strong id="adminBookings">0</strong><p>Table reservations</p></article>
+          <article class="admin-card"><span>Revenue</span><strong id="adminRevenue">₹0</strong><p>Including GST</p></article>
+        </div>
+        <div class="record-panel wide">
+          <h3>Recent Orders</h3>
+          <div id="orderList"></div>
+        </div>
+        </div>
+      </section>
+
+      <section class="view" id="billing">
+        <div class="login-lock" data-lock="billing">
+          <img src="namana-preethi-logo.png" alt="" />
+          <p class="eyebrow">Admin Login Required</p>
+          <h2>Namana & Preethi's Lounge Billing</h2>
+          <p>Use the admin login to unlock the billing desk.</p>
+          <button class="gold-btn" data-view="admin"><i data-lucide="lock-keyhole"></i>Go to Admin Login</button>
+        </div>
+        <div class="locked-content" data-content="billing">
+        <div class="section-head">
+          <div><p class="eyebrow">N&P Billing</p><h2>Namana & Preethi's Lounge Billing</h2></div>
+          <button class="gold-btn" id="saveBill"><i data-lucide="badge-check"></i>Generate Bill</button>
+        </div>
+        <div class="billing-layout">
+          <form class="glass-form billing-form" id="billingForm">
+            <label>Customer Name<input name="customer" value="Guest Customer" /></label>
+            <label>Mobile Number<input name="mobile" value="9876543210" /></label>
+            <label>Item Name<input name="item" placeholder="Food item" /></label>
+            <label>Price<input name="price" type="number" min="1" placeholder="80" /></label>
+            <label>Qty<input name="qty" type="number" min="1" value="1" /></label>
+            <button class="ghost-btn" type="button" id="addBillItem"><i data-lucide="plus"></i>Add Item</button>
+          </form>
+          <div class="bill-preview">
+            <div class="bill-top">
+              <img src="namana-preethi-logo.png" alt="" />
+              <div><h3>Namana & Preethi's Lounge</h3><p>BIET College, Davangere</p><small id="billReceiptMeta">Receipt preview ready</small></div>
+            </div>
+            <div id="billRows"></div>
+            <div class="total-row"><span>Subtotal</span><strong id="billSubtotal">₹0</strong></div>
+            <div class="total-row"><span>GST 5%</span><strong id="billGst">₹0</strong></div>
+            <div class="total-row grand"><span>Total</span><strong id="billTotal">₹0</strong></div>
+            <div class="receipt-confirm" id="billConfirm">Receipt confirmation will appear here after billing.</div>
+            <div class="signature"><span>Digital Signature</span><strong>Namana & Preethi's Lounge</strong><i data-lucide="badge-check"></i></div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="app.js?v=4"></script>
+</body>
+</html>

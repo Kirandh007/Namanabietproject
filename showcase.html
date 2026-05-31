@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namana & Preethi's Lounge | Luxury Restaurant</title>
+  <meta name="description" content="Namana & Preethi's Lounge at Data Science Department, BIET College, Davangere. Where Great Food Meets Great Memories." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=7" />
+</head>
+<body>
+  <div class="loader" aria-label="Loading website">
+    <div class="loader-mark">N<span>&</span>P</div>
+    <div class="loader-line"></div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Namana and Preethi's Lounge home">
+      <img class="brand-logo" src="namana-preethi-logo.png" alt="Namana and Preethi's Lounge logo" />
+      <span class="brand-text">Namana & Preethi's Lounge</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reservation">Reserve</a>
+      <a href="#visit">Visit</a>
+    </nav>
+
+    <div class="header-portals" aria-label="Portal access">
+      <a class="portal-chip login-chip" href="#portals" data-portal-target="welcome"><i data-lucide="log-in"></i>Login</a>
+    </div>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <i data-lucide="menu"></i>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="Restaurant introduction">
+      <div class="hero-bg active" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=85');"></div>
+      <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=85');"></div>
+      <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=2200&q=85');"></div>
+      <div class="hero-shade"></div>
+
+      <div class="hero-content reveal">
+        <img class="hero-logo" src="namana-preethi-logo.png" alt="Namana and Preethi's Lounge luxury logo" />
+        <p class="eyebrow">Data Science Department, BIET College, Davangere</p>
+        <h1>Namana & Preethi's Lounge</h1>
+        <p class="tagline">Where Great Food Meets Great Memories</p>
+        <p class="welcome">Welcome to a refined dining experience crafted for warm conversations, graceful celebrations, and plates that feel unforgettable.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#menu"><i data-lucide="utensils"></i>Explore Menu</a>
+          <a class="btn secondary" href="#reservation"><i data-lucide="calendar-check"></i>Reserve Table</a>
+          <a class="btn secondary" href="#portals" data-portal-target="customer"><i data-lucide="shopping-bag"></i>Order Online</a>
+        </div>
+      </div>
+
+      <div class="floating-card card-one reveal">
+        <span>Chef's Pick</span>
+        <strong>Masala Dosa</strong>
+      </div>
+      <div class="floating-card card-two reveal">
+        <span>Signature</span>
+        <strong>Paneer Butter Masala</strong>
+      </div>
+    </section>
+
+    <section class="quote-carousel" aria-label="Dining quote slideshow">
+      <div class="carousel-track">
+        <article class="quote-slide active" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=85');">
+          <p>"Life is uncertain. Eat dessert first."</p>
+        </article>
+        <article class="quote-slide" style="background-image:url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1800&q=85');">
+          <p>"Good food is the foundation of genuine happiness."</p>
+        </article>
+        <article class="quote-slide" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1800&q=85');">
+          <p>"Food tastes better when shared."</p>
+        </article>
+        <article class="quote-slide" style="background-image:url('https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1800&q=85');">
+          <p>"Love enters through the kitchen."</p>
+        </article>
+        <article class="quote-slide" style="background-image:url('https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?auto=format&fit=crop&w=1800&q=85');">
+          <p>"People who love to eat are always the best people."</p>
+        </article>
+        <article class="quote-slide" style="background-image:url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1800&q=85');">
+          <p>"Eat well. Laugh often. Live fully."</p>
+        </article>
+        <article class="quote-slide" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1800&q=85');">
+          <p>"Diet starts tomorrow. Today we feast."</p>
+        </article>
+        <article class="quote-slide" style="background-image:url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1800&q=85');">
+          <p>"Every meal is a celebration."</p>
+        </article>
+      </div>
+      <div class="carousel-progress" aria-hidden="true"><span></span></div>
+    </section>
+
+    <section class="about section-pad" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Our Story</p>
+        <h2>Built for campus moments that feel special.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>Namana & Preethi's Lounge brings the polish of an international dining room into the heart of the Data Science Department at BIET College, Davangere. It is imagined as a place where students, faculty, friends, and families can slow down, share comforting food, and turn everyday meals into memorable rituals.</p>
+          <p>Our vision is simple: serve familiar Indian favorites with premium presentation, consistent warmth, and a calm atmosphere that makes every guest feel welcomed. Every dish is selected for comfort, freshness, and the joy of eating together.</p>
+          <div class="values">
+            <span><i data-lucide="leaf"></i>Fresh Taste</span>
+            <span><i data-lucide="heart"></i>Warm Service</span>
+            <span><i data-lucide="gem"></i>Premium Ambience</span>
+          </div>
+        </div>
+
+        <div class="about-images reveal">
+          <img class="portrait" src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&q=85" alt="Elegant restaurant dining table" />
+          <img class="landscape" src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1100&q=85" alt="Beautiful plated restaurant food" />
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-band" aria-label="Restaurant highlights">
+      <div class="stat reveal">
+        <strong data-count="27">0</strong>
+        <span>Curated Dishes</span>
+      </div>
+      <div class="stat reveal">
+        <strong data-count="3">0</strong>
+        <span>Signature Menus</span>
+      </div>
+      <div class="stat reveal">
+        <strong data-count="5">0</strong>
+        <span>Star Experience</span>
+      </div>
+      <div class="stat reveal">
+        <strong data-count="100">0</strong>
+        <span>Memories Served</span>
+      </div>
+    </section>
+
+    <section class="menu section-pad" id="menu">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Menu Showcase</p>
+        <h2>Classic Indian favorites, dressed for a luxury table.</h2>
+      </div>
+
+      <div class="menu-tabs reveal" role="tablist" aria-label="Menu categories">
+        <button class="menu-tab active" type="button" data-category="south" role="tab" aria-selected="true">South Indian</button>
+        <button class="menu-tab" type="button" data-category="north" role="tab" aria-selected="false">North Indian</button>
+        <button class="menu-tab" type="button" data-category="beverages" role="tab" aria-selected="false">Beverages</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="gallery section-pad" id="gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Gallery</p>
+        <h2>Dining rooms, shared tables, and food worth pausing for.</h2>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="reservation section-pad" id="reservation">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Reservation & Access</p>
+        <h2>Book a table or enter your lounge portal.</h2>
+      </div>
+
+      <div class="reservation-layout">
+        <form class="reservation-card reveal" aria-label="Table reservation form">
+          <div class="card-title-row">
+            <span class="portal-emblem"><i data-lucide="calendar-check"></i></span>
+            <div>
+              <p class="eyebrow">Table Reservation</p>
+              <h3>Reserve Your Moment</h3>
+            </div>
+          </div>
+          <div class="reservation-fields">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Guest name" />
+            </label>
+            <label>
+              <span>Phone</span>
+              <input type="tel" name="phone" placeholder="+91 98765 43210" />
+            </label>
+            <label>
+              <span>Date</span>
+              <input type="date" name="date" />
+            </label>
+            <label>
+              <span>Time</span>
+              <input type="time" name="time" />
+            </label>
+            <label>
+              <span>Guests</span>
+              <select name="guests">
+                <option>2 Guests</option>
+                <option>4 Guests</option>
+                <option>6 Guests</option>
+                <option>8 Guests</option>
+                <option>Private Gathering</option>
+              </select>
+            </label>
+            <label>
+              <span>Occasion</span>
+              <select name="occasion">
+                <option>Casual Dining</option>
+                <option>Birthday</option>
+                <option>Family Meal</option>
+                <option>Faculty Meet</option>
+                <option>Celebration</option>
+              </select>
+            </label>
+          </div>
+          <button class="btn primary reservation-submit" type="submit"><i data-lucide="concierge-bell"></i>Book Table</button>
+          <p class="reservation-note" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="portal-stack portal-stage" id="portals">
+          <article class="portal-card portal-welcome reveal active" data-portal-card="welcome">
+            <div class="portal-logo welcome-logo">
+              <img src="namana-preethi-logo.png" alt="" />
+              <i data-lucide="sparkles"></i>
+            </div>
+            <div>
+              <p class="eyebrow">Welcome Portal</p>
+              <h3>Choose Your Lounge Access</h3>
+              <p>Enter the customer dining page for online orders, or open the admin page for billing and restaurant controls.</p>
+            </div>
+            <div class="portal-choice-row">
+              <button class="portal-choice customer-choice" type="button" data-portal-target="customer"><i data-lucide="user-round"></i>Customer Portal</button>
+              <button class="portal-choice admin-choice" type="button" data-portal-target="admin"><i data-lucide="shield-check"></i>Admin Portal</button>
+            </div>
+          </article>
+
+          <article class="portal-card customer portal-page reveal" data-portal-card="customer">
+            <div class="portal-logo">
+              <img src="namana-preethi-logo.png" alt="" />
+              <i data-lucide="user-round"></i>
+            </div>
+            <div>
+              <p class="eyebrow">Customer Portal</p>
+              <h3>Guest Login & Online Order</h3>
+              <p>Sign in to reserve tables, order food online, save favorites, and track lounge updates.</p>
+            </div>
+            <button class="portal-back" type="button" data-portal-target="welcome" aria-label="Back to portal welcome"><i data-lucide="arrow-left"></i></button>
+            <form class="portal-login customer-login" aria-label="Customer login form">
+              <label>
+                <span>Mobile or Email</span>
+                <input type="text" placeholder="customer@lounge.com" />
+              </label>
+              <label>
+                <span>Password</span>
+                <input type="password" placeholder="Enter password" />
+              </label>
+              <button class="portal-link" type="submit"><span>Login</span><i data-lucide="arrow-up-right"></i></button>
+            </form>
+
+            <div class="order-suite" aria-label="Customer online ordering">
+              <div class="order-head">
+                <span><i data-lucide="shopping-bag"></i> Online Order</span>
+                <strong id="orderTotal">₹0</strong>
+              </div>
+              <div class="order-items">
+                <button type="button" data-order-name="Masala Dosa" data-order-price="80">Masala Dosa <span>₹80</span></button>
+                <button type="button" data-order-name="Paneer Butter Masala" data-order-price="180">Paneer Butter Masala <span>₹180</span></button>
+                <button type="button" data-order-name="Veg Biryani" data-order-price="150">Veg Biryani <span>₹150</span></button>
+                <button type="button" data-order-name="Lassi" data-order-price="60">Lassi <span>₹60</span></button>
+              </div>
+              <p class="order-note" id="orderNote">Choose items to build a premium lounge order.</p>
+            </div>
+          </article>
+
+          <article class="portal-card admin portal-page reveal" data-portal-card="admin">
+            <div class="portal-logo">
+              <img src="namana-preethi-logo.png" alt="" />
+              <i data-lucide="shield-check"></i>
+            </div>
+            <div>
+              <p class="eyebrow">Admin Portal</p>
+              <h3>Admin Login & Control Suite</h3>
+              <p>Manage reservations, online orders, menu highlights, gallery content, and daily lounge operations.</p>
+            </div>
+            <button class="portal-back" type="button" data-portal-target="welcome" aria-label="Back to portal welcome"><i data-lucide="arrow-left"></i></button>
+            <form class="portal-login admin-login" aria-label="Admin login form">
+              <label>
+                <span>Admin ID</span>
+                <input type="text" placeholder="NP-Lounge-Admin" />
+              </label>
+              <label>
+                <span>Secure Key</span>
+                <input type="password" placeholder="Enter secure key" />
+              </label>
+              <button class="portal-link" type="submit"><span>Login</span><i data-lucide="lock-keyhole"></i></button>
+            </form>
+
+            <div class="admin-suite" aria-label="Admin dashboard preview">
+              <span><strong>18</strong> table requests</span>
+              <span><strong>42</strong> online orders</span>
+              <span><strong>6</strong> menu updates</span>
+            </div>
+
+            <form class="billing-system" aria-label="Modern admin billing system">
+              <div class="billing-head">
+                <div>
+                  <p class="eyebrow">Billing System</p>
+                  <h3>Digital Restaurant Bill</h3>
+                </div>
+                <span class="bill-id">BILL #NP-2026</span>
+              </div>
+              <div class="billing-fields">
+                <label>
+                  <span>Customer Name</span>
+                  <input name="billCustomer" type="text" placeholder="Customer name" value="Guest Customer" />
+                </label>
+                <label>
+                  <span>Mobile Number</span>
+                  <input name="billMobile" type="tel" placeholder="Mobile number" value="9876543210" />
+                </label>
+              </div>
+              <div class="add-bill-item">
+                <label>
+                  <span>Item Name</span>
+                  <input name="newBillItem" type="text" placeholder="Add food item" />
+                </label>
+                <label>
+                  <span>Price</span>
+                  <input name="newBillPrice" type="number" min="1" step="1" placeholder="₹" />
+                </label>
+                <label>
+                  <span>Qty</span>
+                  <input name="newBillQty" type="number" min="1" step="1" value="1" />
+                </label>
+                <button class="add-item-button" type="button"><i data-lucide="plus"></i>Add Item</button>
+              </div>
+              <div class="bill-items">
+                <label><input type="checkbox" data-bill-item="Masala Dosa" data-bill-price="80" data-bill-qty="1" checked /> <span>Masala Dosa × 1</span><strong>₹80</strong></label>
+                <label><input type="checkbox" data-bill-item="Paneer Butter Masala" data-bill-price="180" data-bill-qty="1" checked /> <span>Paneer Butter Masala × 1</span><strong>₹180</strong></label>
+                <label><input type="checkbox" data-bill-item="Veg Biryani" data-bill-price="150" data-bill-qty="1" /> <span>Veg Biryani × 1</span><strong>₹150</strong></label>
+                <label><input type="checkbox" data-bill-item="Lassi" data-bill-price="60" data-bill-qty="1" /> <span>Lassi × 1</span><strong>₹60</strong></label>
+              </div>
+              <div class="bill-summary">
+                <span>Items Total <strong id="billSubtotal">₹260</strong></span>
+                <span>GST 5% <strong id="billGst">₹13</strong></span>
+                <span class="grand-total">Grand Total <strong id="billTotal">₹273</strong></span>
+              </div>
+              <div class="digital-signature">
+                <div>
+                  <span>Digital Signature</span>
+                  <strong>Namana & Preethi's Lounge</strong>
+                </div>
+                <i data-lucide="badge-check"></i>
+              </div>
+              <button class="btn primary bill-button" type="submit"><i data-lucide="receipt-text"></i>Generate Bill</button>
+              <p class="bill-note" role="status" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="visit-panel reveal">
+        <p class="eyebrow">Visit Us</p>
+        <h2>Reserve a table for the next great memory.</h2>
+        <p>Data Science Department, BIET College, Davangere</p>
+        <div class="visit-actions">
+          <a class="btn primary" href="tel:+910000000000"><i data-lucide="phone"></i>Call Lounge</a>
+          <a class="btn secondary" href="https://maps.google.com/?q=BIET%20College%20Davangere" target="_blank" rel="noreferrer"><i data-lucide="map-pin"></i>Get Directions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="namana-preethi-logo.png" alt="Namana and Preethi's Lounge logo" />
+        <h3>Namana & Preethi's Lounge</h3>
+        <p>Where Great Food Meets Great Memories</p>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <p>Data Science Department<br />BIET College, Davangere</p>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <p>Monday - Saturday<br />8:00 AM - 9:00 PM</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i data-lucide="camera"></i></a>
+          <a href="#" aria-label="Facebook"><i data-lucide="thumbs-up"></i></a>
+          <a href="#" aria-label="Twitter"><i data-lucide="send"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Namana & Preethi's Lounge. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Gallery image preview">
+    <button class="lightbox-close" type="button" aria-label="Close gallery preview"><i data-lucide="x"></i></button>
+    <img src="" alt="" />
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="script.js?v=7"></script>
+</body>
+</html>
